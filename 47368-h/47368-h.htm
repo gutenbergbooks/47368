@@ -1,0 +1,560 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /*
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0;
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent {
+    text-indent: 0
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered {
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   {
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td,
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td,
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /*
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 }
+
+  .first            { margin-top: 0 !important;
+                    text-indent: 0 !important }
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+  <title>SOME ADVENTURES OF MR. SURELOCK KEYS</title>
+</head>
+<body>
+  <div class="document" id="some-adventures-of-mr-surelock-keys">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">SOME ADVENTURES OF MR. SURELOCK KEYS</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container titlepage">
+      <div class="vspace" style="height: 4em"></div>
+      <p class="center pfirst"><span class="bold xx-large">SOME ADVENTURES<br /></span> <em class="bold italics xx-large">of</em> <span class="bold xx-large"><br />
+      MR. SURELOCK KEYS</span></p>
+      <p class="center pnext"><span class="bold large">HITHERTO UNRECORDED</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">by</span></p>
+      <p class="center pnext"><span class="large">Herbert Beeman</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">SOLD IN AID OF THE ORGAN FUND<br />
+      OF ST. MARY'S CHURCH, KERRISDALE</span></p>
+      <p class="center pnext"><span class="medium">PRICE FIFTY CENTS</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">THE KERRISDALE KRONIKLE OFFICE<br />
+      1913</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="bold large">CONTENTS</span></p>
+    <ol class="upperroman simple">
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-the-steveston-car">THE ADVENTURE OF THE STEVESTON CAR</a></p>
+      </li>
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-the-irate-house-holder">THE ADVENTURE OF THE IRATE HOUSE-HOLDER</a></p>
+      </li>
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-two-and-two">THE ADVENTURE OF TWO AND TWO</a></p>
+      </li>
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-theophilus-brown">THE ADVENTURE OF THEOPHILUS BROWN</a></p>
+      </li>
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-the-thirteen-cabs">THE ADVENTURE OF THE THIRTEEN CABS</a></p>
+      </li>
+      <li>
+        <p class="first noindent pfirst"><a class="reference internal" href="#the-adventure-of-mr-santa-claus">THE ADVENTURE OF MR. SANTA CLAUS</a></p>
+      </li>
+    </ol>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-the-steveston-car"><span class="bold large">I.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF THE STEVESTON CAR</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>One evening early in the month of November, 1908, we were sitting in our cosy rooms in Butcher Street. I was busy extending the notes I had made of some of the marvellous doings of the Great Detective, when Keys stretched his long arms towards the gramophone to start the gentleman who was "afraid to go home in the dark," off on another long explanation of his reasons, but I stopped him with a question—even friendship has its limits, you know:</span></p>
+    <p class="pnext"><span>"You saw the</span> <em class="italics">Eburne News</em> <span>of Saturday last, Keys, I suppose?" I said.</span></p>
+    <p class="pnext"><span>"You know nothing ever escapes me, Whenson," he replied.</span></p>
+    <p class="pnext"><span>I thought of the Tiger of San Pedro in</span> <em class="italics">Collier's</em> <span>and</span> <em class="italics">The Strand</em> <span>recently, but as it would be about as safe to rouse the tiger, I omitted the retort obvious.</span></p>
+    <p class="pnext"><span>"You refer to the penetration of the vitrified material by the leaden missile, I presume?" he said.</span></p>
+    <p class="pnext"><span>"Yes, the bullet from a .22 through the car window," I replied.</span></p>
+    <p class="pnext"><span>"Well, there was one peculiar thing about that case, but after all it was merely a matter of calculation. The shot was fired according to one account at Kerrisdale, and from another between Townsend and Eburne. That is easily accounted for. The shot struck the glass at the first named place, but so fast was the car travelling that it had proceeded two miles before the bullet reached the woodwork on the other side."</span></p>
+    <p class="pnext"><span>"Oh!" I said. When I had sufficiently recovered I asked him if he had discovered who fired the shot.</span></p>
+    <p class="pnext"><span>"That is a mere vulgar detail, Whenson," he said coldly, as he turned to start the gramophone again.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-the-irate-house-holder"><span class="bold large">II.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF THE IRATE HOUSE-HOLDER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>We were just finishing breakfast when the door was unceremoniously burst open and an obviously excited little man precipitated himself into the room.</span></p>
+    <p class="pnext"><span>"You are an optimist, I perceive," said Keys quietly.</span></p>
+    <p class="pnext"><span>The little man looked amazed, as well he might, not knowing the powers of the Great Detective as well as I did.</span></p>
+    <p class="pnext"><span>"How on earth did you know that?" he ejaculated.</span></p>
+    <p class="pnext"><span>"Quite simple, my dear sir," answered Keys, "you came in without knocking. What can I do for you?"</span></p>
+    <p class="pnext"><span>"Well, sir," the little man went on excitedly, "my name is Bloggs, sir, Joseph Bloggs, and I am the victim of a conspiracy. The Council have sent me in a bill for $96 for three months water rate, and I never used so much in my life.</span></p>
+    <p class="pnext"><span>"No, I can quite believe it," said Keys drily, surveying the rather drab appearance of the visible portions of our visitor's anatomy. "But whom do you suspect?"</span></p>
+    <p class="pnext"><span>"Well, sir, I voted against the nincompoops that the effete electors have chosen to represent them, and now they're soaking me."</span></p>
+    <p class="pnext"><span>I could not control my laughter at this unconscious pleasantry, but the little man glared at me, and Keys frowned me into silence.</span></p>
+    <p class="pnext"><span>"Whenson, he has given me a clue; get my gum boots and a piece of blotting paper."</span></p>
+    <p class="pnext"><span>Accustomed to obey his strange commands without question, we were soon following Mr. Bloggs to his home.</span></p>
+    <p class="pnext"><span>Once inside the gate, without hesitation Keys strode across the lawn till he reached a place under which, owing to the unevenness of the ground, it was easy to see the pipe was laid, and stooping down he placed the sheet of blotting paper on the grass, and a second later he held it up saturated with water.</span></p>
+    <p class="pnext"><span>"There is a break in the pipe, Mr. Bloggs," he said. "Get it mended."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-two-and-two"><span class="bold large">III.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF TWO AND TWO</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Keys was giving way to one of those orgies of spring onions and Limburger cheese to which he occasionally succumbed—for even the greatest of men have failings—and the atmosphere of our dining room was very unpleasant to one with my delicate olfactory nerves, so that it was with a feeling of positive relief that I welcomed the pungent odor of the smoke from a strong black cigar that was wafted in on us as the door opened to admit a stranger.</span></p>
+    <p class="pnext"><span>A tall, nervous looking man, he commenced to apologize for having interrupted us at supper, but Keys waved aside his explanations and said abruptly. "You are a married man, sir, and very fond of your wife."</span></p>
+    <p class="pnext"><span>Wonderingly our visitor pleaded guilty to both indictments, and Keys resumed:</span></p>
+    <p class="pnext"><span>"Of course any one could tell that your wife has given you a Christmas present, a man with your intelligence would never buy a cigar like that, and only love for her would induce you to smoke it."</span></p>
+    <p class="pnext"><span>"Sir, I can see you are just the man to solve the mystery that is making my life a hideous nightmare, if I am fortunate enough to interest you in my case.</span></p>
+    <p class="pnext"><span>"My name is Humphrey Drake, and I am a country squire living in a peaceful village, and up to a week ago I was as placid as one of my own cows, but alas all is changed and I know not what dreadful fate is hanging over my head. I once read a wonderful book called '</span><em class="italics">The Sign of the Four</em><span>,' (I am a modest man, so I blushed at this unconscious praise, you, dear reader, will know why), and now I fear that the terrible end of Bartholemew Sholto will be mine."</span></p>
+    <p class="pnext"><span>Mr. Drake turned very pale, whether from fear, or from the strong cigar, I do not know, but after a few minutes he recovered himself, and at Keys' request continued his story.</span></p>
+    <p class="pnext"><span>"Last week I had occasion to go to the stable immediately behind the house and on one of the walls saw in figures made with a piece of white chalk, this sign," and drawing his fountain pen from his pocket, he marked on our white table cloth</span></p>
+    <pre class="literal-block">
+<span>2
+2 .
+—
+4 .</span>
+</pre>
+    <p class="pfirst"><span>"I haven't been able to sleep since, and now I have come to you for help."</span></p>
+    <p class="pnext"><span>"Why did you visit the stable, Mr. Drake?" asked Keys.</span></p>
+    <p class="pnext"><span>"Well, lately the carriage and harness have not been properly cleaned, or the horse well groomed, and I went to speak to the stable-man about it."</span></p>
+    <p class="pnext"><span>Hastily consulting a time-table, Keys disappeared into his bed room, returning the next moment disguised as a stable-boy, even to a straw, which he was chewing assiduously.</span></p>
+    <p class="pnext"><span>"Whenson will put you up, Mr. Drake, and I will report to you at breakfast tomorrow morning. Meanwhile you can sleep in peace."</span></p>
+    <p class="pnext"><span>Coming down to breakfast the next morning, we found Keys seated by the fire reading the paper.</span></p>
+    <p class="pnext"><span>"Good morning, all is well, but breakfast first and business afterwards," he said.</span></p>
+    <p class="pnext"><span>It was not until our pipes were well alight that Keys deigned to satisfy our curiosity.</span></p>
+    <p class="pnext"><span>"The mystery was a very harmless one, Mr. Drake, as I expected it would be after the clue you gave me. I went round to the back of your house and looked in at the stable window, and there was the culprit, your young stable-man, with a laudable desire to improve his mind, though rather at the expense of his duty to you, I am afraid, was pouring over the arithmetic section of Barmsbirth's Universal Educator, and with a piece of white chalk was endeavoring to work out a simple sum on your stable wall, and, my dear sir, the answer to his sum, and the explanation of your mystery, is that two and two make four."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-theophilus-brown"><span class="bold large">IV.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF THEOPHILUS BROWN</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"'Tis not in mortals to command success," as the Immortal Bard hath it, and to illustrate the fact that my friend, Mr. Surelock Keys, really is mortal which one might easily doubt from some of the marvellous things that he has done, I will give you an incident that happened recently.</span></p>
+    <p class="pnext"><span>A tremendous battering at my bedroom door woke me from a sound sleep, and an urgent request from Keys, to join him downstairs, hurried me into my clothes. On entering the dining room I saw a pallid youth whom Keys introduced as Mr. Theophilus Brown.</span></p>
+    <p class="pnext"><span>Then Keys, in his most abrupt manner, asked him what he wished to tell us, and after much hesitation, and with frightened glances towards the door, he blurted out a very incoherent and rambling story about a severed leg, that he had seen hanging up somewhere, on his way home the previous evening, and how he was afraid something dreadful would happen to him because he didn't tell the police.</span></p>
+    <p class="pnext"><span>"Well, you can now, here is our old friend, Inspector Morebusiness" (You, dear reader, can guess his real name). "Tell the Inspector what you saw."</span></p>
+    <p class="pnext"><span>"It was a leg of mutton hanging up in a butcher's shop," shouted the miserable would-be humorist, as he made a dash out of the door, just in time to escape the bottle of ink that Keys sent hurtling through the air, only, alas! to smash on the rapidly closing door.</span></p>
+    <p class="pnext"><span>The Inspector rolling on the floor in a paroxysm of laughter could hardly get out the words. "First of April," and Keys sank back in his chair muttering the monosyllable "Stung!"</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-the-thirteen-cabs"><span class="bold large">V.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF THE THIRTEEN CABS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>London was in the throes of a general strike, and the labour world in such a seething ferment that many of the unions had broken from the control of their leaders, while others were led to lengths that many of the members deeply regretted, but were unable to prevent, so that deeds of violence were of daily occurrence.</span></p>
+    <p class="pnext"><span>As we sat at breakfast Inspector Morebusiness was announced, and Keys bade him to enter, not very cordially I am afraid, as it was the first time we had seen him since his display of—to put it mildly—undue levity over the unfortunate case of Theophilus Brown. However, on seeing how white and worried the Inspector looked, Keys' look of annoyance passed away, and heartily inviting him to join us at the table, refused to listen to his story until he had done justice to our ham and eggs and coffee.</span></p>
+    <p class="pnext"><span>It was a terrible story that the inspector had to tell us. nothing less than the destruction of the National Gallery, with its priceless treasures, and of course loss of life, or injury, to anyone happening to be in the neighborhood, for nitro-glycerine was the destructive agent used.</span></p>
+    <p class="pnext"><span>He went on to say that the police had no clue, and in despair he had come to Keys, a genuine acknowledgment of the Great Detective's marvellous powers, if a somewhat tardy one.</span></p>
+    <p class="pnext"><span>Keys closely questioned him as to anything unusual having been noticed in the vicinity, and the inspector said that one of his men had seen thirteen cabs passing shortly before the explosion.</span></p>
+    <p class="pnext"><span>"Arrest the President and all the Officers of the Bakers' and Pastrycooks' Union, at once," said Keys. Greatly wondering, but willing to catch at any straw, the Inspector hastened to obey him.</span></p>
+    <p class="pnext"><span>One evening, some little time after the conviction and subsequent confession of the men whose arrest Keys had ordered, the Inspector dropped in, he said, for a smoke, but it was easy to see that he was dying to ask a question, so presently Keys said, "Well, Morebusiness, you want to know how I did it."</span></p>
+    <p class="pnext"><span>The Inspector nodded an eager assent.</span></p>
+    <p class="pnext"><span>"Well, my friend, it was quite simple. Dynamite is heavy stuff, and in such a quantity could not have been carried by hand without exciting suspicion, but what more harmless looking than a four-wheeler, and thirteen of them—isn't that a baker's dozen!"</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-adventure-of-mr-santa-claus"><span class="bold large">VI.</span></p>
+    <p class="center pnext"><span class="bold large">THE ADVENTURE OF MR. SANTA CLAUS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>It was Christmas Eve. Outside the snow was falling heavily, but we were comfortably seated in front of a cheerful fire, in our dining-room in Butcher Street. With strange illogicality Keys was playing "Rest Ye Merry Gentlemen" on the comb, for surely one could neither rest nor be merry with that beastly row going on, but it was only another proof of the extraordinary incongruity of that marvellous man. Laying down the comb—thank goodness—he turned to me. "Whenson, when I was a little boy I believed in Santa Claus, and stockings, and—"</span></p>
+    <p class="pnext"><span>A knock at the door interrupted these remarkable confidences, which were revealing the Great Man in a light so foreign to his usual taciturnity.</span></p>
+    <p class="pnext"><span>"Come in," he said. The door opened slowly, and a strange figure appeared before our astonished eyes. It was a small boy, hardly reaching to the handle of the door, and his little cap was covered with snow.</span></p>
+    <p class="pnext"><span>"Ah, ha!" said Keys, in his most impressive manner, "you have just come in from outside." At the evidence of such uncanny powers of deduction the little creature started to run away.</span></p>
+    <p class="pnext"><span>"Don't be frightened, my little man. I knew it from the coagulated moisture collected on your cap, but little boys must learn to be polite. Lift your lid." He did so, scattering the Christmas largesse all over our priceless Bokhara rug.</span></p>
+    <p class="pnext"><span>"Now come over here and tell its your troubles," said Keys kindly.</span></p>
+    <p class="pnext"><span>In the genial warmth of the roaring fire, his damp clothes steaming like a hot toddy—a strange concoction of the ancient Romans—his little lips lisped a tale of a strangeness such as had surely never been told before, unless I may be allowed to except some stories of mine which have been published by the well-known firm of Brown &amp; Younger.</span></p>
+    <p class="pnext"><span>"Please sir, I writted a letter to Mr. Sandy Claws Esq., to bring me a hairy-plain for Christmas all painted red all over, and the Post-Offis they sent the letter back and says as how they carn't find 'im. I knowed you could find anybody, so I come to you."</span></p>
+    <p class="pnext"><span>"Quite right, my little man," and Keys' keen eyes gleamed with professional pride. "You go straight home to bed and to sleep, and I will see that Mr. Santa Claus calls and you will find the red aeroplane when you wake up in the morning."</span></p>
+    <p class="pnext"><span>Quite satisfied the diminutive client departed, and Keys picked up the comb again—I found I had an important engagement and departed also.</span></p>
+    <p class="pnext"><span>It was close on one o'clock in the morning when I returned, and Keys was still sitting before the fire. With unusual geniality he got up and held out his hand. "Merry Christmas, Whenson." We shook hands. Feeling something sticky, I looked at my right hand, and saw some red paint on it, and then I noticed some white fluff adhering to the front of his coat.</span></p>
+    <p class="pnext"><span>Keys often assumed disguises, but—as Santa Claus!—well, I forgave him the comb.</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
